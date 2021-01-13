@@ -6,7 +6,7 @@ import App from "./App";
 
 const ConnectedApp = () => {
   <Provider store={store}>
-    <Aoo />
+    <App />
   </Provider>;
 };
 registerRootComponent(ConnectedApp);
