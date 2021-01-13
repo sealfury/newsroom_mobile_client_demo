@@ -1,5 +1,5 @@
 const initialState = {
-  appTitle: "NewsOfTheWorld",
+  appTitle: "News Of The World",
   articles: []
 }
 

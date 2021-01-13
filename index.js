@@ -5,8 +5,10 @@ import { registerRootComponent } from "expo";
 import App from "./App";
 
 const ConnectedApp = () => {
-  <Provider store={store}>
-    <App />
-  </Provider>;
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 };
 registerRootComponent(ConnectedApp);
