@@ -1,6 +1,15 @@
 
 const rootReducer = (state, action) => {
-  return state
+
+  switch (action.type) {
+    case 'UPDATE_ARTICLE_INDEX':
+      return {
+        ...state,
+        articles: action.payload.articles
+      }
+    default:
+     return state
+  }
 }
 
 export default rootReducer
