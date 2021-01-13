@@ -1,4 +1,12 @@
-import {registerRootComponent} from 'expo'
-import App from './App'
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./state/store/store";
+import { registerRootComponent } from "expo";
+import App from "./App";
 
-registerRootComponent(App)
+const ConnectedApp = () => {
+  <Provider store={store}>
+    <Aoo />
+  </Provider>;
+};
+registerRootComponent(ConnectedApp);
