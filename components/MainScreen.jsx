@@ -5,13 +5,6 @@ import { StatusBar } from "expo-status-bar";
 import Articles from "../modules/Articles";
 import ArticleIndexDetails from "./ArticleIndexDetails";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-});
-
 const MainScreen = ({navigation}) => {
   const { articles } = useSelector((state) => state);
   useEffect(() => {
@@ -24,7 +17,7 @@ const MainScreen = ({navigation}) => {
         data={articles}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <ArticleIndexDetails navigation={navigation} article={item} />
+          <ArticleIndexDetails style={styles.container} navigation={navigation} article={item} />
         )}
       />
     </View>
@@ -32,3 +25,12 @@ const MainScreen = ({navigation}) => {
 };
 
 export default MainScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    textAlign: 'center'
+  },
+});
+

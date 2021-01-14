@@ -33,16 +33,22 @@ const styles = StyleSheet.create({
     padding: 7,
     paddingLeft: 10,
     paddingRight: 8,
-    bottom: 8,
+    bottom: 60,
     backgroundColor: "rgba(0,0,0,0.3)",
   },
   title: {
     color: "white",
     fontSize: 30,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    textShadowColor: 'black',
+    textShadowRadius: 8,
   },
   subtitle: {
     color: "white",
     fontSize: 16,
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   image: {
     height: 250,

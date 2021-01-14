@@ -8,7 +8,7 @@ import ArticleShow from './components/ArticleShow'
 const Stack = createStackNavigator()
 
 const App = () => {
-  const { appTitle } = useSelector((state) => state);
+  const { appTitle, currentArticle } = useSelector((state) => state);
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -18,17 +18,31 @@ const App = () => {
           options={{ 
             title: appTitle,
             headerStyle: {
-              backgroundColor: 'purple'
+              backgroundColor: 'black'
             },
             headerTitleStyle: {
               color: 'white',
-              fontSize: 22
+              fontSize: 24,
+              fontFamily: 'Futura-CondensedMedium',
+              fontWeight: 'bold',
             }
            }}
         />
         <Stack.Screen 
           name="ArticleShow"
           component={ArticleShow}
+          options={{
+            title: currentArticle.title,
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTitleStyle: {
+              color: 'white',
+              fontSize: 18,
+              fontFamily: 'Futura-CondensedMedium',
+              fontWeight: 'bold',
+            }
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
