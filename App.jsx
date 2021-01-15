@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import MainScreen from './app/components/MainScreen'
 import ArticleShow from './app/components/ArticleShow'
+import {Button} from 'react-native'
 
 const Stack = createStackNavigator()
 
@@ -17,6 +18,9 @@ const App = () => {
           component={MainScreen} 
           options={{ 
             title: appTitle,
+            headerRight: () => (
+              <Button  title='Click me' />
+            ),
             headerStyle: {
               backgroundColor: 'black'
             },
